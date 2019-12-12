@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.contrib import messages
-from django.shortcuts import render, redirect
+from django.shortcuts import redirect, render
+
 from mail_templated_simple import send_mail
 
 from .forms import ContactForm

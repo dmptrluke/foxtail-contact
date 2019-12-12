@@ -1,9 +1,9 @@
-from captcha.fields import ReCaptchaField
-from crispy_forms.helper import FormHelper
-from crispy_forms.layout import Layout, Row, Column, Div, HTML
-
 from django import forms
 from django.conf import settings
+
+from captcha.fields import ReCaptchaField
+from crispy_forms.helper import FormHelper
+from crispy_forms.layout import HTML, Column, Layout, Row
 
 
 class ContactForm(forms.Form):
