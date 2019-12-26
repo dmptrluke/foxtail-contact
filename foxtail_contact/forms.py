@@ -1,27 +1,27 @@
-from django import forms
 from django.conf import settings
+from django.forms import CharField, EmailField, Form, Textarea
 
 from captcha.fields import ReCaptchaField
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import HTML, Column, Layout, Row
+from csp_helpers.mixins import CSPFormMixin
 
 
-class ContactForm(forms.Form):
+class ContactForm(CSPFormMixin, Form):
     if settings.RECAPTCHA_ENABLED:
         captcha = ReCaptchaField()
 
-    name = forms.CharField(required=True)
-    email = forms.EmailField(required=True)
-    message = forms.CharField(
+    name = CharField(required=True)
+    email = EmailField(required=True)
+    message = CharField(
         required=True,
-        widget=forms.Textarea
+        widget=Textarea
     )
 
     def __init__(self, *args, **kwargs):
-        super(ContactForm, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.helper = FormHelper()
         self.helper.form_tag = False
-        self.helper.disable_csrf = True
         self.helper.error_text_inline = False
 
         if settings.RECAPTCHA_ENABLED:

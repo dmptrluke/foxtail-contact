@@ -11,7 +11,8 @@ install_requires = [
     'django>=2.2',
     'django-mail-templated-simple',
     'django-crispy-forms',
-    'django-recaptcha'
+    'django-recaptcha',
+    'django-csp-helpers>=0.3'
 ]
 
 setuptools.setup(
@@ -19,7 +20,7 @@ setuptools.setup(
     version=version['__version__'],
     author="Luke Rogers",
     author_email="lukeroge@gmail.com",
-    description="A blog.",
+    description="A contact form.",
     install_requires=install_requires,
     long_description=long_description,
     long_description_content_type="text/markdown",
