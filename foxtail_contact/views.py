@@ -12,7 +12,7 @@ from .forms import ContactForm
 class ContactView(CSPViewMixin, FormView):
     template_name = 'contact/contact.html'
     form_class = ContactForm
-    success_url = reverse_lazy('contact')
+    success_url = reverse_lazy('contact:contact')
 
     def form_valid(self, form):
         context = {
