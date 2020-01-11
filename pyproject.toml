@@ -25,7 +25,7 @@ requires = [
     'django>=2.2',
     'django-mail-templated-simple',
     'django-crispy-forms',
-    'django-recaptcha',
+    'django-recaptcha-foxtail',
     'django-csp-helpers>=0.5.0'
 ]
 

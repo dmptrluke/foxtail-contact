@@ -14,6 +14,11 @@ class ContactView(CSPViewMixin, FormView):
     form_class = ContactForm
     success_url = reverse_lazy('contact:contact')
 
+    def get_initial(self):
+        initial = super().get_initial()
+        initial['email'] = self.request.GET.get('email', None)
+        return initial
+
     def form_valid(self, form):
         context = {
             'name': form.cleaned_data['name'],
