@@ -1,5 +1,5 @@
 [build-system]
-requires = ["flit_core >=2,<3"]
+requires = ["flit_core >=3.2,<4"]
 build-backend = "flit_core.buildapi"
 
 [tool.flit.metadata]
@@ -8,9 +8,7 @@ module = "foxtail_contact"
 description-file = "README.md"
 classifiers = [
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.6",
-    "Programming Language :: Python :: 3.7",
-    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.11",
     "Development Status :: 4 - Beta",
     "Framework :: Django",
     "Intended Audience :: Developers",
@@ -22,7 +20,7 @@ author-email = "luke@dmptr.com"
 home-page = "https://github.com/dmptrluke/foxtail-contact"
 requires-python=">=3.6"
 requires = [
-    'django>=2.2',
+    'django>=4',
     'django-mail-templated-simple',
     'django-crispy-forms',
     'django-recaptcha',

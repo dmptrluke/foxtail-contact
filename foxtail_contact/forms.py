@@ -1,7 +1,7 @@
 from django.forms import CharField, EmailField, Form, Textarea
 
-from captcha.fields import ReCaptchaField
-from captcha.widgets import ReCaptchaV2Invisible
+from django_recaptcha.fields import ReCaptchaField
+from django_recaptcha.widgets import ReCaptchaV2Invisible
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import HTML, Column, Layout, Row
 from csp_helpers.mixins import CSPFormMixin
